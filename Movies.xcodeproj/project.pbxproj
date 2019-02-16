@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846888002217850C006DCF7C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846887FF2217850C006DCF7C /* RxSwift.framework */; };
+		8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468880122178514006DCF7C /* RxCocoa.framework */; };
+		84688805221789BE006DCF7C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688804221789BD006DCF7C /* Swinject.framework */; };
+		84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */; };
+		84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688808221789CE006DCF7C /* SwinjectStoryboard.framework */; };
+		846887FE22178502006DCF7C /* Net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846887FD22178502006DCF7C /* Net.framework */; };
 		8483B66822121D0F00590283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483B66722121D0F00590283 /* AppDelegate.swift */; };
 		8483B66F22121D1100590283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8483B66E22121D1100590283 /* Assets.xcassets */; };
 		8483B67222121D1100590283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8483B67022121D1100590283 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		846887FF2217850C006DCF7C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		8468880122178514006DCF7C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		84688804221789BD006DCF7C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		84688808221789CE006DCF7C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		846887FD22178502006DCF7C /* Net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Net.framework; path = Carthage/Build/iOS/Net.framework; sourceTree = "<group>"; };
 		8483B66422121D0F00590283 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8483B66722121D0F00590283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8483B66E22121D1100590283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846888002217850C006DCF7C /* RxSwift.framework in Frameworks */,
+				8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */,
+				84688805221789BE006DCF7C /* Swinject.framework in Frameworks */,
+				84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */,
+				84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */,
+				846887FE22178502006DCF7C /* Net.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846887FC22178501006DCF7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846887FF2217850C006DCF7C /* RxSwift.framework */,
+				8468880122178514006DCF7C /* RxCocoa.framework */,
+				84688804221789BD006DCF7C /* Swinject.framework */,
+				84688808221789CE006DCF7C /* SwinjectStoryboard.framework */,
+				84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */,
+				846887FD22178502006DCF7C /* Net.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8483B65B22121D0F00590283 = {
 			isa = PBXGroup;
 			children = (
 				8483B66622121D0F00590283 /* Movies */,
 				8483B66522121D0F00590283 /* Products */,
+				846887FC22178501006DCF7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +116,7 @@
 				8483B66022121D0F00590283 /* Sources */,
 				8483B66122121D0F00590283 /* Frameworks */,
 				8483B66222121D0F00590283 /* Resources */,
+				8468880322178523006DCF7C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -137,6 +170,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8468880322178523006DCF7C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Net.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Net.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8483B66022121D0F00590283 /* Sources */ = {
@@ -282,6 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,6 +368,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

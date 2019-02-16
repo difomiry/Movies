@@ -1,0 +1,5 @@
+github "ReactiveX/RxSwift" "4.4.1"
+github "Swinject/Swinject" "2.5.0"
+github "Swinject/SwinjectAutoregistration" "2.5.1"
+github "Swinject/SwinjectStoryboard" "2.1.0"
+github "difomiry/Net" "0.1"
