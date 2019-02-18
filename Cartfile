@@ -1,4 +1,6 @@
 github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxOptional"
+github "RxSwiftCommunity/RxDataSources"
 github "Swinject/Swinject"
 github "Swinject/SwinjectAutoregistration"
 github "Swinject/SwinjectStoryboard"

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		846888002217850C006DCF7C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846887FF2217850C006DCF7C /* RxSwift.framework */; };
 		8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468880122178514006DCF7C /* RxCocoa.framework */; };
+		84B0B195221B04C70022D908 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0B194221B04C70022D908 /* RxOptional.framework */; };
+		84B0B197221B04D00022D908 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0B196221B04D00022D908 /* RxDataSources.framework */; };
 		84688805221789BE006DCF7C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688804221789BD006DCF7C /* Swinject.framework */; };
 		84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */; };
 		84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688808221789CE006DCF7C /* SwinjectStoryboard.framework */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		846887FF2217850C006DCF7C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		8468880122178514006DCF7C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		84B0B194221B04C70022D908 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		84B0B196221B04D00022D908 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		84688804221789BD006DCF7C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
 		84688808221789CE006DCF7C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 			files = (
 				846888002217850C006DCF7C /* RxSwift.framework in Frameworks */,
 				8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */,
+				84B0B195221B04C70022D908 /* RxOptional.framework in Frameworks */,
+				84B0B197221B04D00022D908 /* RxDataSources.framework in Frameworks */,
 				84688805221789BE006DCF7C /* Swinject.framework in Frameworks */,
 				84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */,
 				84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */,
@@ -54,6 +60,8 @@
 			children = (
 				846887FF2217850C006DCF7C /* RxSwift.framework */,
 				8468880122178514006DCF7C /* RxCocoa.framework */,
+				84B0B194221B04C70022D908 /* RxOptional.framework */,
+				84B0B196221B04D00022D908 /* RxDataSources.framework */,
 				84688804221789BD006DCF7C /* Swinject.framework */,
 				84688808221789CE006DCF7C /* SwinjectStoryboard.framework */,
 				84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */,
@@ -182,6 +190,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
@@ -192,6 +202,8 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
