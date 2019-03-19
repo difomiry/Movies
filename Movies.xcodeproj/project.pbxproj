@@ -7,33 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		846888002217850C006DCF7C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846887FF2217850C006DCF7C /* RxSwift.framework */; };
-		8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468880122178514006DCF7C /* RxCocoa.framework */; };
-		84B0B195221B04C70022D908 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0B194221B04C70022D908 /* RxOptional.framework */; };
-		84B0B197221B04D00022D908 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0B196221B04D00022D908 /* RxDataSources.framework */; };
-		84688805221789BE006DCF7C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688804221789BD006DCF7C /* Swinject.framework */; };
-		84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */; };
-		84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84688808221789CE006DCF7C /* SwinjectStoryboard.framework */; };
-		846887FE22178502006DCF7C /* Net.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846887FD22178502006DCF7C /* Net.framework */; };
 		8483B66822121D0F00590283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483B66722121D0F00590283 /* AppDelegate.swift */; };
 		8483B66F22121D1100590283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8483B66E22121D1100590283 /* Assets.xcassets */; };
 		8483B67222121D1100590283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8483B67022121D1100590283 /* LaunchScreen.storyboard */; };
+		84AEA6222240EE6100B456E1 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA6172240EE6000B456E1 /* RxMoya.framework */; };
+		84AEA6232240EE6100B456E1 /* SwinjectAutoregistration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA6182240EE6000B456E1 /* SwinjectAutoregistration.framework */; };
+		84AEA6242240EE6100B456E1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA6192240EE6000B456E1 /* RxSwift.framework */; };
+		84AEA6252240EE6100B456E1 /* RxTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61A2240EE6000B456E1 /* RxTheme.framework */; };
+		84AEA6262240EE6100B456E1 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61B2240EE6000B456E1 /* Moya.framework */; };
+		84AEA6272240EE6100B456E1 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61C2240EE6000B456E1 /* SwinjectStoryboard.framework */; };
+		84AEA6282240EE6100B456E1 /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61D2240EE6000B456E1 /* RxDataSources.framework */; };
+		84AEA6292240EE6100B456E1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61E2240EE6000B456E1 /* Alamofire.framework */; };
+		84AEA62A2240EE6100B456E1 /* RxOptional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA61F2240EE6000B456E1 /* RxOptional.framework */; };
+		84AEA62B2240EE6100B456E1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA6202240EE6000B456E1 /* RxCocoa.framework */; };
+		84AEA62C2240EE6100B456E1 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA6212240EE6100B456E1 /* Swinject.framework */; };
+		84AEA62E2240F36400B456E1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA62D2240F36400B456E1 /* Result.framework */; };
+		84AEA6302240F3FB00B456E1 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEA62F2240F3FB00B456E1 /* RxAtomic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		846887FF2217850C006DCF7C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		8468880122178514006DCF7C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		84B0B194221B04C70022D908 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
-		84B0B196221B04D00022D908 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
-		84688804221789BD006DCF7C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
-		84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
-		84688808221789CE006DCF7C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
-		846887FD22178502006DCF7C /* Net.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Net.framework; path = Carthage/Build/iOS/Net.framework; sourceTree = "<group>"; };
 		8483B66422121D0F00590283 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8483B66722121D0F00590283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8483B66E22121D1100590283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8483B67122121D1100590283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8483B67322121D1100590283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AEA6172240EE6000B456E1 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		84AEA6182240EE6000B456E1 /* SwinjectAutoregistration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectAutoregistration.framework; path = Carthage/Build/iOS/SwinjectAutoregistration.framework; sourceTree = "<group>"; };
+		84AEA6192240EE6000B456E1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		84AEA61A2240EE6000B456E1 /* RxTheme.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTheme.framework; path = Carthage/Build/iOS/RxTheme.framework; sourceTree = "<group>"; };
+		84AEA61B2240EE6000B456E1 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		84AEA61C2240EE6000B456E1 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		84AEA61D2240EE6000B456E1 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		84AEA61E2240EE6000B456E1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		84AEA61F2240EE6000B456E1 /* RxOptional.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxOptional.framework; path = Carthage/Build/iOS/RxOptional.framework; sourceTree = "<group>"; };
+		84AEA6202240EE6000B456E1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		84AEA6212240EE6100B456E1 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		84AEA62D2240F36400B456E1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		84AEA62F2240F3FB00B456E1 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,14 +51,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846888002217850C006DCF7C /* RxSwift.framework in Frameworks */,
-				8468880222178514006DCF7C /* RxCocoa.framework in Frameworks */,
-				84B0B195221B04C70022D908 /* RxOptional.framework in Frameworks */,
-				84B0B197221B04D00022D908 /* RxDataSources.framework in Frameworks */,
-				84688805221789BE006DCF7C /* Swinject.framework in Frameworks */,
-				84688807221789C4006DCF7C /* SwinjectAutoregistration.framework in Frameworks */,
-				84688809221789CE006DCF7C /* SwinjectStoryboard.framework in Frameworks */,
-				846887FE22178502006DCF7C /* Net.framework in Frameworks */,
+				84AEA6292240EE6100B456E1 /* Alamofire.framework in Frameworks */,
+				84AEA6262240EE6100B456E1 /* Moya.framework in Frameworks */,
+				84AEA62E2240F36400B456E1 /* Result.framework in Frameworks */,
+				84AEA6242240EE6100B456E1 /* RxSwift.framework in Frameworks */,
+				84AEA62B2240EE6100B456E1 /* RxCocoa.framework in Frameworks */,
+				84AEA6302240F3FB00B456E1 /* RxAtomic.framework in Frameworks */,
+				84AEA62A2240EE6100B456E1 /* RxOptional.framework in Frameworks */,
+				84AEA6282240EE6100B456E1 /* RxDataSources.framework in Frameworks */,
+				84AEA6252240EE6100B456E1 /* RxTheme.framework in Frameworks */,
+				84AEA6222240EE6100B456E1 /* RxMoya.framework in Frameworks */,
+				84AEA62C2240EE6100B456E1 /* Swinject.framework in Frameworks */,
+				84AEA6232240EE6100B456E1 /* SwinjectAutoregistration.framework in Frameworks */,
+				84AEA6272240EE6100B456E1 /* SwinjectStoryboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,14 +73,19 @@
 		846887FC22178501006DCF7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				846887FF2217850C006DCF7C /* RxSwift.framework */,
-				8468880122178514006DCF7C /* RxCocoa.framework */,
-				84B0B194221B04C70022D908 /* RxOptional.framework */,
-				84B0B196221B04D00022D908 /* RxDataSources.framework */,
-				84688804221789BD006DCF7C /* Swinject.framework */,
-				84688808221789CE006DCF7C /* SwinjectStoryboard.framework */,
-				84688806221789C4006DCF7C /* SwinjectAutoregistration.framework */,
-				846887FD22178502006DCF7C /* Net.framework */,
+				84AEA61E2240EE6000B456E1 /* Alamofire.framework */,
+				84AEA61B2240EE6000B456E1 /* Moya.framework */,
+				84AEA62D2240F36400B456E1 /* Result.framework */,
+				84AEA6202240EE6000B456E1 /* RxCocoa.framework */,
+				84AEA62F2240F3FB00B456E1 /* RxAtomic.framework */,
+				84AEA61D2240EE6000B456E1 /* RxDataSources.framework */,
+				84AEA6172240EE6000B456E1 /* RxMoya.framework */,
+				84AEA61F2240EE6000B456E1 /* RxOptional.framework */,
+				84AEA6192240EE6000B456E1 /* RxSwift.framework */,
+				84AEA61A2240EE6000B456E1 /* RxTheme.framework */,
+				84AEA6212240EE6100B456E1 /* Swinject.framework */,
+				84AEA6182240EE6000B456E1 /* SwinjectAutoregistration.framework */,
+				84AEA61C2240EE6000B456E1 /* SwinjectStoryboard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,26 +208,36 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTheme.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectAutoregistration.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Net.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Moya.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxOptional.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTheme.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxMoya.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectAutoregistration.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwinjectStoryboard.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Net.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
