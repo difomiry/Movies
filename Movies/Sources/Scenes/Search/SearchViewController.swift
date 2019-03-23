@@ -1,24 +1,37 @@
 import UIKit
 import RxSwift
 
-final class SearchViewController: BaseViewController {
+final class SearchViewController: ViewController<SearchViewModel> {
 
-  fileprivate var viewModel: SearchViewModel!
+  // MARK: - Views
+
+  @IBOutlet private var searchBar: UISearchBar!
+
+  @IBOutlet private var tableView: UITableView!
+
+  // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = .white
+    setupBindings()
   }
 
 }
 
+// MARK: - Setup
+
 extension SearchViewController {
 
-  static func make(with viewModel: SearchViewModel) -> SearchViewController {
-    let viewController = SearchViewController()
-    viewController.viewModel = viewModel
-    return viewController
+  fileprivate func setupBindings() {
+
+    themes.rx
+      .bind({ $0.barStyle }, to: searchBar.rx.barStyle)
+      .disposed(by: disposeBag)
+
+    themes.rx
+      .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
+      .disposed(by: disposeBag)
   }
 
 }

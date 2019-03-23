@@ -1,20 +1,30 @@
 import UIKit
 import RxSwift
+import Swinject
+import SwinjectStoryboard
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  var appCoordinator: AppCoordinator!
+  let resolver = Assembler([
+    AppAssembly(),
+    DiscoverAssembly(),
+    SearchAssembly(),
+    MoreAssembly(),
+    SettingsAssembly(),
+  ], container: SwinjectStoryboard.defaultContainer).resolver
 
   let disposeBag = DisposeBag()
+
+  var appCoordinator: AppCoordinator!
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     window = UIWindow()
 
-    appCoordinator = AppCoordinator(in: window!)
+    appCoordinator = resolver.resolve(AppCoordinator.self, argument: window!)
 
     appCoordinator.start()
       .subscribe()

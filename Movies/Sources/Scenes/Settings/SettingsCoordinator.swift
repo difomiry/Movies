@@ -1,17 +1,21 @@
 import UIKit
 import RxSwift
+import Swinject
 
-final class SettingsCoordinator: BaseCoordinator<Void> {
+final class SettingsCoordinator: Coordinator<Void> {
 
   let navigationController: UINavigationController
 
-  init(in navigationController: UINavigationController) {
+  let resolver: Resolver
+
+  init(in navigationController: UINavigationController, with resolver: Resolver) {
     self.navigationController = navigationController
+    self.resolver = resolver
   }
 
   override func start() -> Observable<Void> {
 
-    let viewController = SettingsViewController.make(with: SettingsViewModel())
+    let viewController = SettingsViewController.instantiate()
 
     viewController.title = "Settings"
 

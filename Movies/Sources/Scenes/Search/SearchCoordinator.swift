@@ -1,17 +1,21 @@
 import UIKit
 import RxSwift
+import Swinject
 
-final class SearchCoordinator: BaseCoordinator<Void> {
+final class SearchCoordinator: Coordinator<Void> {
 
   let navigationController: UINavigationController
 
-  init(in navigationController: UINavigationController) {
+  let resolver: Resolver
+
+  init(in navigationController: UINavigationController, with resolver: Resolver) {
     self.navigationController = navigationController
+    self.resolver = resolver
   }
 
   override func start() -> Observable<Void> {
 
-    let viewController = SearchViewController.make(with: SearchViewModel())
+    let viewController = SearchViewController.instantiate()
 
     viewController.title = "Search"
 

@@ -1,24 +1,31 @@
 import UIKit
 import RxSwift
 
-final class DiscoverViewController: BaseViewController {
+final class DiscoverViewController: ViewController<DiscoverViewModel> {
 
-  fileprivate var viewModel: DiscoverViewModel!
+  // MARK: - Views
+
+  @IBOutlet private var tableView: UITableView!
+
+  // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = .white
+    setupBindings()
   }
 
 }
 
+// MARK: - Setup
+
 extension DiscoverViewController {
 
-  static func make(with viewModel: DiscoverViewModel) -> DiscoverViewController {
-    let viewController = DiscoverViewController()
-    viewController.viewModel = viewModel
-    return viewController
+  fileprivate func setupBindings() {
+
+    themes.rx
+      .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
+      .disposed(by: disposeBag)
   }
 
 }

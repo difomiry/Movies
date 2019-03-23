@@ -2,21 +2,24 @@ import UIKit
 import RxSwift
 import Swinject
 
-final class AppCoordinator: BaseCoordinator<Void> {
+final class AppCoordinator: Coordinator<Void> {
 
   let window: UIWindow
 
-  init(in window: UIWindow) {
+  let resolver: Resolver
+
+  init(in window: UIWindow, with resolver: Resolver) {
     self.window = window
+    self.resolver = resolver
   }
 
   override func start() -> Observable<Void> {
 
     let tabBarController = UITabBarController()
 
-    let navigationController1 = UINavigationController()
-    let navigationController2 = UINavigationController()
-    let navigationController3 = UINavigationController()
+    let navigationController1 = fetchNavigationController()
+    let navigationController2 = fetchNavigationController()
+    let navigationController3 = fetchNavigationController()
 
     navigationController1.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "Rocket"), tag: 0)
     navigationController2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "Search"), tag: 1)
@@ -27,19 +30,43 @@ final class AppCoordinator: BaseCoordinator<Void> {
     window.rootViewController = tabBarController
     window.makeKeyAndVisible()
 
-    coordinate(to: DiscoverCoordinator(in: navigationController1))
+    coordinate(to: resolver.resolve(DiscoverCoordinator.self, argument: navigationController1)!)
       .subscribe()
       .disposed(by: disposeBag)
 
-    coordinate(to: SearchCoordinator(in: navigationController2))
+    coordinate(to: resolver.resolve(SearchCoordinator.self, argument: navigationController2)!)
       .subscribe()
       .disposed(by: disposeBag)
 
-    coordinate(to: MoreCoordinator(in: navigationController3))
+    coordinate(to: resolver.resolve(MoreCoordinator.self, argument: navigationController3)!)
       .subscribe()
+      .disposed(by: disposeBag)
+
+    themes.attrsStream
+      .subscribe(onNext: { theme in
+        tabBarController.tabBar.barStyle = theme.barStyle
+      })
       .disposed(by: disposeBag)
 
     return .never()
+  }
+
+  fileprivate func fetchNavigationController() -> UINavigationController {
+
+    let navigationController = UINavigationController()
+
+    themes.rx
+      .bind({ $0.navigationBarForegroundColor }, to: navigationController.navigationBar.rx.tintColor)
+      .disposed(by: disposeBag)
+
+    themes.rx
+      .bind({ $0.navigationBarBackgroundColor }, to: navigationController.navigationBar.rx.barTintColor)
+      .disposed(by: disposeBag)
+
+    themes.rx
+      .bind({ $0.navigationBarTitleTextAttributes }, to: navigationController.navigationBar.rx.titleTextAttributes)
+
+    return navigationController
   }
 
 }

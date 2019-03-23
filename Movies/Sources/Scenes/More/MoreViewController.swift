@@ -2,32 +2,39 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class MoreViewController: BaseViewController {
+final class MoreViewController: ViewController<MoreViewModel> {
 
-  fileprivate var viewModel: MoreViewModel!
+  // MARK: - Views
+
+  @IBOutlet private var tableView: UITableView!
 
   private let settingsButton = UIBarButtonItem(image: UIImage(named: "Settings"), style: .done, target: nil, action: nil)
+
+  // MARK: - UIViewController
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     navigationItem.rightBarButtonItem = settingsButton
 
-    view.backgroundColor = .white
-
-    settingsButton.rx.tap
-      .bind(to: viewModel.tapSettings)
-      .disposed(by: disposeBag)
+    setupBindings()
   }
 
 }
 
+// MARK: - Setup
+
 extension MoreViewController {
 
-  static func make(with viewModel: MoreViewModel) -> MoreViewController {
-    let viewController = MoreViewController()
-    viewController.viewModel = viewModel
-    return viewController
+  fileprivate func setupBindings() {
+
+    themes.rx
+      .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
+      .disposed(by: disposeBag)
+
+    settingsButton.rx.tap
+      .bind(to: viewModel.tapSettings)
+      .disposed(by: disposeBag)
   }
 
 }

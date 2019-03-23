@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 
 /// Base abstract coordinator generic over the return type of the `start` method.
-class BaseCoordinator<ResultType> {
+class Coordinator<ResultType> {
 
   /// Typealias which will allows to access a ResultType of the Coordainator by `CoordinatorName.CoordinationResult`.
   typealias CoordinationResult = ResultType
@@ -22,14 +22,14 @@ class BaseCoordinator<ResultType> {
   /// Stores coordinator to the `childCoordinators` dictionary.
   ///
   /// - Parameter coordinator: Child coordinator to store.
-  private func store<T>(coordinator: BaseCoordinator<T>) {
+  private func store<T>(coordinator: Coordinator<T>) {
     childCoordinators[coordinator.identifier] = coordinator
   }
 
   /// Release coordinator from the `childCoordinators` dictionary.
   ///
   /// - Parameter coordinator: Coordinator to release.
-  private func free<T>(coordinator: BaseCoordinator<T>) {
+  private func free<T>(coordinator: Coordinator<T>) {
     childCoordinators[coordinator.identifier] = nil
   }
 
@@ -39,7 +39,7 @@ class BaseCoordinator<ResultType> {
   ///
   /// - Parameter coordinator: Coordinator to start.
   /// - Returns: Result of `start()` method.
-  func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
+  func coordinate<T>(to coordinator: Coordinator<T>) -> Observable<T> {
     store(coordinator: coordinator)
     return coordinator.start()
       .do(onNext: { [weak self] _ in self?.free(coordinator: coordinator) })
