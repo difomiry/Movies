@@ -29,7 +29,7 @@ final class MoreCoordinator: Coordinator<Void> {
   }
 
   private func openSettings() {
-    coordinate(to: SettingsCoordinator(in: navigationController, with: resolver))
+    coordinate(to: resolver.resolve(SettingsCoordinator.self, argument: navigationController)!)
       .subscribe()
       .disposed(by: disposeBag)
   }

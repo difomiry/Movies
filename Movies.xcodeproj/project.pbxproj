@@ -267,11 +267,11 @@
 		84EAD003224108B2005E39DC /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				84DF65DD2244A46200F1F056 /* Discover.storyboard */,
 				8447826D22463B45008D84C0 /* DiscoverAssembly.swift */,
 				84EAD006224108F9005E39DC /* DiscoverCoordinator.swift */,
 				84EAD01722411B3F005E39DC /* DiscoverViewController.swift */,
 				84EAD01922411B6F005E39DC /* DiscoverViewModel.swift */,
-				84DF65DD2244A46200F1F056 /* Discover.storyboard */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -279,11 +279,11 @@
 		84EAD004224108BC005E39DC /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				84DF65E12244A4C700F1F056 /* Search.storyboard */,
 				8447827122463C6D008D84C0 /* SearchAssembly.swift */,
 				84EAD00A22410A1E005E39DC /* SearchCoordinator.swift */,
 				84EAD01B22411BC8005E39DC /* SearchViewController.swift */,
 				84EAD01D22411BEC005E39DC /* SearchViewModel.swift */,
-				84DF65E12244A4C700F1F056 /* Search.storyboard */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -291,11 +291,11 @@
 		84EAD005224108CA005E39DC /* More */ = {
 			isa = PBXGroup;
 			children = (
+				84DF65DF2244A49C00F1F056 /* More.storyboard */,
 				8447826F22463BF0008D84C0 /* MoreAssembly.swift */,
 				84EAD008224109BD005E39DC /* MoreCoordinator.swift */,
 				84EAD00F22411641005E39DC /* MoreViewController.swift */,
 				84EAD01122411684005E39DC /* MoreViewModel.swift */,
-				84DF65DF2244A49C00F1F056 /* More.storyboard */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -304,11 +304,11 @@
 			isa = PBXGroup;
 			children = (
 				8486E0D12243A9080020CCD5 /* Cells */,
+				848BDBF022439B6200AC214A /* Settings.storyboard */,
 				8447827322463CD0008D84C0 /* SettingsAssembly.swift */,
 				84EAD00D22410ACC005E39DC /* SettingsCoordinator.swift */,
 				84EAD01F22411BFF005E39DC /* SettingsViewController.swift */,
 				84EAD02122411C1F005E39DC /* SettingsViewModel.swift */,
-				848BDBF022439B6200AC214A /* Settings.storyboard */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
