@@ -17,7 +17,9 @@ final class DiscoverCoordinator: Coordinator<Void> {
 
     let viewController = DiscoverViewController.instantiate()
 
-    navigationController.isNavigationBarHidden = true
+    viewController.title = "Discover"
+
+    navigationController.navigationBar.prefersLargeTitles = true
 
     navigationController.pushViewController(viewController, animated: false)
 

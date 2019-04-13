@@ -66,6 +66,12 @@ final class AppCoordinator: Coordinator<Void> {
     themes.rx
       .bind({ $0.navigationBarTitleTextAttributes }, to: navigationController.navigationBar.rx.titleTextAttributes)
 
+    themes.attrsStream
+      .subscribe(onNext: { theme in
+        navigationController.navigationBar.largeTitleTextAttributes = theme.navigationBarTitleTextAttributes
+      })
+      .disposed(by: disposeBag)
+
     return navigationController
   }
 

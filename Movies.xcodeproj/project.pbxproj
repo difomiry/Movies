@@ -17,6 +17,14 @@
 		8447827022463BF0008D84C0 /* MoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447826F22463BF0008D84C0 /* MoreAssembly.swift */; };
 		8447827222463C6D008D84C0 /* SearchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447827122463C6D008D84C0 /* SearchAssembly.swift */; };
 		8447827422463CD0008D84C0 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447827322463CD0008D84C0 /* SettingsAssembly.swift */; };
+		8447827922479A15008D84C0 /* TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447827822479A15008D84C0 /* TMDB.swift */; };
+		8447827C2247F941008D84C0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447827B2247F941008D84C0 /* Search.swift */; };
+		84715EB62248F7770020CC3A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84715EB42248F7770020CC3A /* SearchCell.swift */; };
+		84715EB72248F7770020CC3A /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84715EB52248F7770020CC3A /* SearchCell.xib */; };
+		84715EB9224916B50020CC3A /* SearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84715EB8224916B50020CC3A /* SearchCellViewModel.swift */; };
+		84722FAA2261FB1B00BF7398 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84722FA92261FB1B00BF7398 /* Configuration.plist */; };
+		84722FAC2261FB6C00BF7398 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84722FAB2261FB6C00BF7398 /* Configuration.swift */; };
+		84722FAE2261FBBC00BF7398 /* Dictionary+Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84722FAD2261FBBC00BF7398 /* Dictionary+Plist.swift */; };
 		8483B66822121D0F00590283 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483B66722121D0F00590283 /* AppDelegate.swift */; };
 		8483B66F22121D1100590283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8483B66E22121D1100590283 /* Assets.xcassets */; };
 		8483B67222121D1100590283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8483B67022121D1100590283 /* LaunchScreen.storyboard */; };
@@ -74,6 +82,14 @@
 		8447826F22463BF0008D84C0 /* MoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreAssembly.swift; sourceTree = "<group>"; };
 		8447827122463C6D008D84C0 /* SearchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAssembly.swift; sourceTree = "<group>"; };
 		8447827322463CD0008D84C0 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		8447827822479A15008D84C0 /* TMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB.swift; sourceTree = "<group>"; };
+		8447827B2247F941008D84C0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		84715EB42248F7770020CC3A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		84715EB52248F7770020CC3A /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		84715EB8224916B50020CC3A /* SearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewModel.swift; sourceTree = "<group>"; };
+		84722FA92261FB1B00BF7398 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		84722FAB2261FB6C00BF7398 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		84722FAD2261FBBC00BF7398 /* Dictionary+Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Plist.swift"; sourceTree = "<group>"; };
 		8483B66422121D0F00590283 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8483B66722121D0F00590283 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8483B66E22121D1100590283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +163,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8447827722479A04008D84C0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8447827822479A15008D84C0 /* TMDB.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8447827A2247F933008D84C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8447827B2247F941008D84C0 /* Search.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		846887FC22178501006DCF7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +198,16 @@
 				84AEA61C2240EE6000B456E1 /* SwinjectStoryboard.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84715EB32248F75D0020CC3A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				84715EB42248F7770020CC3A /* SearchCell.swift */,
+				84715EB52248F7770020CC3A /* SearchCell.xib */,
+				84715EB8224916B50020CC3A /* SearchCellViewModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8483B65B22121D0F00590283 = {
@@ -190,6 +232,7 @@
 			children = (
 				8483B67A22121D5700590283 /* Resources */,
 				8483B67922121D2700590283 /* Sources */,
+				84722FA92261FB1B00BF7398 /* Configuration.plist */,
 				8483B67322121D1100590283 /* Info.plist */,
 			);
 			path = Movies;
@@ -198,7 +241,9 @@
 		8483B67922121D2700590283 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8447827A2247F933008D84C0 /* Models */,
 				84EAD002224108A3005E39DC /* Scenes */,
+				8447827722479A04008D84C0 /* Services */,
 				84EACFFD2240F961005E39DC /* Utilities */,
 				8447826B22463AF2008D84C0 /* AppAssembly.swift */,
 				84EAD0002240FA9F005E39DC /* AppCoordinator.swift */,
@@ -219,6 +264,7 @@
 		8486E0CE2243A8B70020CCD5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84722FAD2261FBBC00BF7398 /* Dictionary+Plist.swift */,
 				8486E0CF2243A8C30020CCD5 /* UINavigationController+StatusBarStyle.swift */,
 				8447826922455F51008D84C0 /* UITableView+Reusable.swift */,
 				84DF65DB2244A23E00F1F056 /* UIViewController+StoryboardInstantiable.swift */,
@@ -243,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				8486E0CE2243A8B70020CCD5 /* Extensions */,
+				84722FAB2261FB6C00BF7398 /* Configuration.swift */,
 				84EACFFE2240F9A4005E39DC /* Coordinator.swift */,
 				8447826722455E54008D84C0 /* Reusable.swift */,
 				8447825F2244C835008D84C0 /* Settings.swift */,
@@ -279,6 +326,7 @@
 		84EAD004224108BC005E39DC /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				84715EB32248F75D0020CC3A /* Cells */,
 				84DF65E12244A4C700F1F056 /* Search.storyboard */,
 				8447827122463C6D008D84C0 /* SearchAssembly.swift */,
 				84EAD00A22410A1E005E39DC /* SearchCoordinator.swift */,
@@ -372,11 +420,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				848BDBF122439B6200AC214A /* Settings.storyboard in Resources */,
+				84722FAA2261FB1B00BF7398 /* Configuration.plist in Resources */,
 				8486E0D52243A92E0020CCD5 /* SwitchCell.xib in Resources */,
 				84DF65E02244A49C00F1F056 /* More.storyboard in Resources */,
 				8486E0D92243ACB90020CCD5 /* VersionCell.xib in Resources */,
 				8483B67222121D1100590283 /* LaunchScreen.storyboard in Resources */,
 				8483B66F22121D1100590283 /* Assets.xcassets in Resources */,
+				84715EB72248F7770020CC3A /* SearchCell.xib in Resources */,
 				84DF65E22244A4C700F1F056 /* Search.storyboard in Resources */,
 				84DF65DE2244A46200F1F056 /* Discover.storyboard in Resources */,
 			);
@@ -453,8 +503,11 @@
 				8447826E22463B45008D84C0 /* DiscoverAssembly.swift in Sources */,
 				844782602244C835008D84C0 /* Settings.swift in Sources */,
 				8447827422463CD0008D84C0 /* SettingsAssembly.swift in Sources */,
+				8447827C2247F941008D84C0 /* Search.swift in Sources */,
+				8447827922479A15008D84C0 /* TMDB.swift in Sources */,
 				84EAD01022411641005E39DC /* MoreViewController.swift in Sources */,
 				84DF65DA2244A18200F1F056 /* StoryboardInstantiable.swift in Sources */,
+				84722FAC2261FB6C00BF7398 /* Configuration.swift in Sources */,
 				84EAD02022411BFF005E39DC /* SettingsViewController.swift in Sources */,
 				84EAD01E22411BEC005E39DC /* SearchViewModel.swift in Sources */,
 				84DF65DC2244A23E00F1F056 /* UIViewController+StoryboardInstantiable.swift in Sources */,
@@ -466,8 +519,11 @@
 				84EAD01A22411B6F005E39DC /* DiscoverViewModel.swift in Sources */,
 				84EAD026224122B5005E39DC /* Themes.swift in Sources */,
 				84EAD00B22410A1E005E39DC /* SearchCoordinator.swift in Sources */,
+				84715EB62248F7770020CC3A /* SearchCell.swift in Sources */,
 				84EAD007224108F9005E39DC /* DiscoverCoordinator.swift in Sources */,
 				8447826822455E55008D84C0 /* Reusable.swift in Sources */,
+				84715EB9224916B50020CC3A /* SearchCellViewModel.swift in Sources */,
+				84722FAE2261FBBC00BF7398 /* Dictionary+Plist.swift in Sources */,
 				84EAD02222411C1F005E39DC /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

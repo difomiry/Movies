@@ -15,8 +15,8 @@ final class MoreViewController: ViewController<MoreViewModel> {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    navigationItem.rightBarButtonItem = settingsButton
-
+    setupViews()
+    setupThemes()
     setupBindings()
   }
 
@@ -26,11 +26,19 @@ final class MoreViewController: ViewController<MoreViewModel> {
 
 extension MoreViewController {
 
-  fileprivate func setupBindings() {
+  fileprivate func setupViews() {
+
+    navigationItem.rightBarButtonItem = settingsButton
+  }
+
+  fileprivate func setupThemes() {
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
       .disposed(by: disposeBag)
+  }
+
+  fileprivate func setupBindings() {
 
     settingsButton.rx.tap
       .bind(to: viewModel.tapSettings)

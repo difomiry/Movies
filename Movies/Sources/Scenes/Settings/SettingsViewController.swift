@@ -15,6 +15,7 @@ final class SettingsViewController: ViewController<SettingsViewModel> {
     super.viewDidLoad()
 
     setupViews()
+    setupThemes()
     setupBindings()
   }
 
@@ -34,18 +35,7 @@ extension SettingsViewController {
     tableView.register(VersionCell.self)
   }
 
-  fileprivate func setupBindings() {
-
-    viewModel.cells
-      .bind(to: tableView.rx.items) { tableView, _, item in
-        switch item {
-        case .themeSwitcher:
-          return tableView.dequeue() as SwitchCell
-        case .version:
-          return tableView.dequeue() as VersionCell
-        }
-      }
-      .disposed(by: disposeBag)
+  fileprivate func setupThemes() {
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
@@ -53,6 +43,21 @@ extension SettingsViewController {
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableFooter.rx.backgroundColor)
+      .disposed(by: disposeBag)
+  }
+
+  fileprivate func setupBindings() {
+
+    viewModel.cells
+      .asDriver(onErrorJustReturn: [])
+      .drive(tableView.rx.items) { table, _, item in
+        switch item {
+        case .themeSwitcher:
+          return table.dequeue() as SwitchCell
+        case .version:
+          return table.dequeue() as VersionCell
+        }
+      }
       .disposed(by: disposeBag)
   }
 

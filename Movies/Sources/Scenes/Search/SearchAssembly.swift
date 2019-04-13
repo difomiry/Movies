@@ -10,8 +10,11 @@ final class SearchAssembly: Assembly {
 
     container.autoregister(SearchViewModel.self, initializer: SearchViewModel.init)
 
+    container.autoregister(SearchCellViewModel.self, argument: Search.Result.self, initializer: SearchCellViewModel.init)
+
     container.storyboardInitCompleted(SearchViewController.self) { r, c in
       c.viewModel = r.resolve(SearchViewModel.self)
+      c.searchCellViewModelFactory = { container.resolve(SearchCellViewModel.self, argument: $0)! }
     }
   }
 

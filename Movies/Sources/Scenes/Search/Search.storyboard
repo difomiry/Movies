@@ -18,38 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vKd-6i-dlH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="3VA-Lo-WNC"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nie-DL-8aU">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vKd-6i-dlH" firstAttribute="top" secondItem="guN-8b-FQa" secondAttribute="top" id="2Hn-X8-dQt"/>
-                            <constraint firstItem="vKd-6i-dlH" firstAttribute="leading" secondItem="guN-8b-FQa" secondAttribute="leading" id="OAr-os-hTS"/>
-                            <constraint firstItem="nie-DL-8aU" firstAttribute="top" secondItem="vKd-6i-dlH" secondAttribute="bottom" id="Thp-M4-bcc"/>
-                            <constraint firstItem="guN-8b-FQa" firstAttribute="bottom" secondItem="nie-DL-8aU" secondAttribute="bottom" id="cik-7l-eRW"/>
-                            <constraint firstAttribute="trailing" secondItem="vKd-6i-dlH" secondAttribute="trailing" id="dON-hJ-FNV"/>
-                            <constraint firstItem="nie-DL-8aU" firstAttribute="leading" secondItem="guN-8b-FQa" secondAttribute="leading" id="htw-Lq-kcb"/>
-                            <constraint firstItem="guN-8b-FQa" firstAttribute="trailing" secondItem="nie-DL-8aU" secondAttribute="trailing" id="xC8-0u-fsN"/>
+                            <constraint firstItem="nie-DL-8aU" firstAttribute="bottom" secondItem="guN-8b-FQa" secondAttribute="bottom" id="ai1-uM-wjd"/>
+                            <constraint firstItem="nie-DL-8aU" firstAttribute="trailing" secondItem="guN-8b-FQa" secondAttribute="trailing" id="mk2-xy-Qci"/>
+                            <constraint firstItem="nie-DL-8aU" firstAttribute="top" secondItem="guN-8b-FQa" secondAttribute="top" id="oHW-dj-YJZ"/>
+                            <constraint firstItem="nie-DL-8aU" firstAttribute="leading" secondItem="guN-8b-FQa" secondAttribute="leading" id="s8f-Gv-df2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="guN-8b-FQa"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="vKd-6i-dlH" id="SXs-Zc-XKA"/>
                         <outlet property="tableView" destination="nie-DL-8aU" id="E6A-la-iXD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZm-db-Q0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="661" y="-720"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B2M-B2-3x1">
+            <objects>
+                <viewController restorationIdentifier="SearchResultsViewController" storyboardIdentifier="SearchResultsViewController" id="chv-18-2Z0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KG2-ap-3qy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tUE-GV-0fG">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="REE-aP-RHq" firstAttribute="bottom" secondItem="tUE-GV-0fG" secondAttribute="bottom" id="86W-q3-Eup"/>
+                            <constraint firstItem="tUE-GV-0fG" firstAttribute="top" secondItem="REE-aP-RHq" secondAttribute="top" id="Da6-6q-nEk"/>
+                            <constraint firstItem="tUE-GV-0fG" firstAttribute="leading" secondItem="REE-aP-RHq" secondAttribute="leading" id="eWk-Na-q1w"/>
+                            <constraint firstItem="REE-aP-RHq" firstAttribute="trailing" secondItem="tUE-GV-0fG" secondAttribute="trailing" id="zD9-sf-k7V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="REE-aP-RHq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7j-y7-F6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

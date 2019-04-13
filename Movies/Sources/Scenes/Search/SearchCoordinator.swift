@@ -19,6 +19,8 @@ final class SearchCoordinator: Coordinator<Void> {
 
     viewController.title = "Search"
 
+    navigationController.navigationBar.prefersLargeTitles = true
+
     navigationController.pushViewController(viewController, animated: false)
 
     return .never()
