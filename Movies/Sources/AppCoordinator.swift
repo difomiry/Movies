@@ -8,9 +8,9 @@ final class AppCoordinator: BaseCoordinator<Void, UIWindow> {
 
     let tabBarController = UITabBarController()
 
-    let navigationController1 = fetchNavigationController()
-    let navigationController2 = fetchNavigationController()
-    let navigationController3 = fetchNavigationController()
+    let navigationController1 = makeNavigationController()
+    let navigationController2 = makeNavigationController()
+    let navigationController3 = makeNavigationController()
 
     navigationController1.tabBarItem = UITabBarItem(title: "Discover", image: UIImage(named: "Rocket"), tag: 0)
     navigationController2.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "Search"), tag: 1)
@@ -42,7 +42,7 @@ final class AppCoordinator: BaseCoordinator<Void, UIWindow> {
     return .never()
   }
 
-  fileprivate func fetchNavigationController() -> UINavigationController {
+  fileprivate func makeNavigationController() -> UINavigationController {
 
     let navigationController = UINavigationController()
 
