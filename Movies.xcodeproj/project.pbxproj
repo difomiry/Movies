@@ -22,6 +22,7 @@
 		840FB38F22CA5D4000591EC5 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FB38222CA5D4000591EC5 /* SwinjectStoryboard.framework */; };
 		840FB39122CA5EC000591EC5 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FB39022CA5EC000591EC5 /* RxRelay.framework */; };
 		840FB39322CB65D900591EC5 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB39222CB65D900591EC5 /* BaseCoordinator.swift */; };
+		840FB39922CB76C700591EC5 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB39822CB76C700591EC5 /* Cell.swift */; };
 		844782602244C835008D84C0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447825F2244C835008D84C0 /* Settings.swift */; };
 		84478264224504E9008D84C0 /* SwitchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84478263224504E9008D84C0 /* SwitchCellViewModel.swift */; };
 		8447826622450534008D84C0 /* VersionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447826522450534008D84C0 /* VersionCellViewModel.swift */; };
@@ -88,6 +89,7 @@
 		840FB38222CA5D4000591EC5 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		840FB39022CA5EC000591EC5 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		840FB39222CB65D900591EC5 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		840FB39822CB76C700591EC5 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		8447825F2244C835008D84C0 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		84478263224504E9008D84C0 /* SwitchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellViewModel.swift; sourceTree = "<group>"; };
 		8447826522450534008D84C0 /* VersionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCellViewModel.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				84DF65D92244A18200F1F056 /* StoryboardInstantiable.swift */,
 				84EAD025224122B5005E39DC /* Themes.swift */,
 				84EAD01522411A72005E39DC /* ViewController.swift */,
+				840FB39822CB76C700591EC5 /* Cell.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				84EAD007224108F9005E39DC /* DiscoverCoordinator.swift in Sources */,
 				8447826822455E55008D84C0 /* Reusable.swift in Sources */,
 				84715EB9224916B50020CC3A /* SearchCellViewModel.swift in Sources */,
+				840FB39922CB76C700591EC5 /* Cell.swift in Sources */,
 				84722FAE2261FBBC00BF7398 /* Dictionary+Plist.swift in Sources */,
 				84EAD02222411C1F005E39DC /* SettingsViewModel.swift in Sources */,
 			);

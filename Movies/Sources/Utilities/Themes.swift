@@ -1,6 +1,6 @@
 import RxTheme
 
-let themes = ThemeType.service(initial: settings.theme)
+typealias Themes = ThemeService<ThemeType>
 
 protocol Theme {
   var statusBarStyle: UIStatusBarStyle { get }

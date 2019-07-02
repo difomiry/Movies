@@ -1,7 +1,5 @@
 import Foundation
 
-var settings = UserDefaults.standard as Settings
-
 protocol Settings {
   var theme: ThemeType { get set }
 }

@@ -12,6 +12,8 @@ final class SettingsAssembly: Assembly {
 
     container.storyboardInitCompleted(SettingsViewController.self) { r, c in
       c.viewModel = r.resolve(SettingsViewModel.self)
+      c.settings = r.resolve(Settings.self)
+      c.themes = r.resolve(Themes.self)
     }
   }
 

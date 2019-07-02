@@ -50,12 +50,20 @@ extension SettingsViewController {
 
     viewModel.cells
       .asDriver(onErrorJustReturn: [])
-      .drive(tableView.rx.items) { table, _, item in
+      .drive(tableView.rx.items) { [weak self] table, _, item in
         switch item {
         case .themeSwitcher:
-          return table.dequeue() as SwitchCell
+          let cell = table.dequeue() as SwitchCell
+          cell.viewModel = .init()
+          cell.settings = self?.settings
+          cell.themes = self?.themes
+          return cell
         case .version:
-          return table.dequeue() as VersionCell
+          let cell = table.dequeue() as VersionCell
+          cell.viewModel = .init()
+          cell.settings = self?.settings
+          cell.themes = self?.themes
+          return cell
         }
       }
       .disposed(by: disposeBag)

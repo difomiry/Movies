@@ -85,6 +85,8 @@ extension SearchViewController {
       .drive(tableView.rx.items) { [weak self] table, index, item in
         let cell: SearchCell = table.dequeue()
         cell.viewModel = self?.searchCellViewModelFactory(item)
+        cell.settings = self?.settings
+        cell.themes = self?.themes
         return cell
       }
       .disposed(by: disposeBag)

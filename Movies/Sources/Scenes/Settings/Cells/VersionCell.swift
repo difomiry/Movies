@@ -1,47 +1,22 @@
 import UIKit
 import RxSwift
 
-final class VersionCell: UITableViewCell, NibReusable {
+final class VersionCell: Cell<VersionCellViewModel> {
 
   // MARK: - Views
 
   @IBOutlet private var titleLabel: UILabel!
 
-  // MARK: - Properties
+  // MARK: - Binding
 
-  private var disposeBag = DisposeBag()
-
-  // MARK: - UITableViewCell
-
-  override func awakeFromNib() {
-    super.awakeFromNib()
-
-    setup()
-  }
-
-  override func prepareForReuse() {
-    super.prepareForReuse()
-
-    disposeBag = DisposeBag()
-
-    setup()
-  }
-
-}
-
-// MARK: - Setup
-
-extension VersionCell {
-  
-  fileprivate func setup() {
-
+  override func bind() {
     if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
       titleLabel.text = "Version \(text)"
     }
+  }
 
-    themes.rx
-      .bind({ $0.cellBackgroundColor }, to: rx.backgroundColor)
-      .disposed(by: disposeBag)
+  override func setupTheme() {
+    super.setupTheme()
 
     themes.rx
       .bind({ $0.cellForegroundColor }, to: titleLabel.rx.textColor)

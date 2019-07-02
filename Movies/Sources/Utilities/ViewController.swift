@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class ViewController<ViewModel>: UIViewController, StoryboardInstantiable {
+class ViewController<ViewModelType>: UIViewController, StoryboardInstantiable {
 
   var themedStatusBarStyle: UIStatusBarStyle?
 
@@ -9,7 +9,11 @@ class ViewController<ViewModel>: UIViewController, StoryboardInstantiable {
     return themedStatusBarStyle ?? super.preferredStatusBarStyle
   }
 
-  var viewModel: ViewModel!
+  var viewModel: ViewModelType!
+
+  var settings: Settings!
+
+  var themes: Themes!
 
   let disposeBag = DisposeBag()
 

@@ -14,6 +14,8 @@ final class SearchAssembly: Assembly {
 
     container.storyboardInitCompleted(SearchViewController.self) { r, c in
       c.viewModel = r.resolve(SearchViewModel.self)
+      c.settings = r.resolve(Settings.self)
+      c.themes = r.resolve(Themes.self)
       c.searchCellViewModelFactory = { container.resolve(SearchCellViewModel.self, argument: $0)! }
     }
   }

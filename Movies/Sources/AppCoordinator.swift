@@ -33,7 +33,7 @@ final class AppCoordinator: BaseCoordinator<Void, UIWindow> {
       .subscribe()
       .disposed(by: disposeBag)
 
-    themes.attrsStream
+    resolver.resolve(Themes.self)!.attrsStream
       .subscribe(onNext: { theme in
         tabBarController.tabBar.barStyle = theme.barStyle
       })
@@ -45,6 +45,8 @@ final class AppCoordinator: BaseCoordinator<Void, UIWindow> {
   fileprivate func fetchNavigationController() -> UINavigationController {
 
     let navigationController = UINavigationController()
+
+    let themes = resolver.resolve(Themes.self)!
 
     themes.rx
       .bind({ $0.navigationBarForegroundColor }, to: navigationController.navigationBar.rx.tintColor)

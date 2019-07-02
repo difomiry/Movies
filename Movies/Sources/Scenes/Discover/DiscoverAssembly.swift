@@ -12,6 +12,8 @@ final class DiscoverAssembly: Assembly {
 
     container.storyboardInitCompleted(DiscoverViewController.self) { r, c in
       c.viewModel = r.resolve(DiscoverViewModel.self)
+      c.settings = r.resolve(Settings.self)
+      c.themes = r.resolve(Themes.self)
     }
   }
 

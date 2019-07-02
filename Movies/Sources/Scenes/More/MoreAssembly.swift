@@ -12,6 +12,8 @@ final class MoreAssembly: Assembly {
 
     container.storyboardInitCompleted(MoreViewController.self) { r, c in
       c.viewModel = r.resolve(MoreViewModel.self)
+      c.settings = r.resolve(Settings.self)
+      c.themes = r.resolve(Themes.self)
     }
   }
 
