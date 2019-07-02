@@ -8,15 +8,17 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow? = .init()
 
+  private let disposeBag = DisposeBag()
+
   private let assembler = Assembler(container: SwinjectStoryboard.defaultContainer)
 
   private lazy var resolver = {
     return assembler.resolver
   }()
 
-  private let disposeBag = DisposeBag()
-
-  private var appCoordinator: AppCoordinator!
+  private lazy var appCoordinator: AppCoordinator! = {
+    return resolver.resolve(AppCoordinator.self, argument: window!)
+  }()
 
   func application(_: UIApplication, willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 
@@ -26,8 +28,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-    appCoordinator = resolver.resolve(AppCoordinator.self, argument: window!)
 
     appCoordinator.start()
       .subscribe()
