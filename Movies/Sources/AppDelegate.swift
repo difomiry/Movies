@@ -6,23 +6,26 @@ import SwinjectStoryboard
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var window: UIWindow?
+  var window: UIWindow? = .init()
 
-  let resolver = Assembler([
-    AppAssembly(),
-    DiscoverAssembly(),
-    SearchAssembly(),
-    MoreAssembly(),
-    SettingsAssembly(),
-  ], container: SwinjectStoryboard.defaultContainer).resolver
+  private let assembler = Assembler(container: SwinjectStoryboard.defaultContainer)
 
-  let disposeBag = DisposeBag()
+  private lazy var resolver = {
+    return assembler.resolver
+  }()
 
-  var appCoordinator: AppCoordinator!
+  private let disposeBag = DisposeBag()
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  private var appCoordinator: AppCoordinator!
 
-    window = UIWindow()
+  func application(_: UIApplication, willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+
+    setupDependencies()
+
+    return true
+  }
+
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     appCoordinator = resolver.resolve(AppCoordinator.self, argument: window!)
 
@@ -31,6 +34,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
       .disposed(by: disposeBag)
 
     return true
+  }
+
+}
+
+fileprivate extension AppDelegate {
+
+  func setupDependencies() {
+    assembler.apply(assembly: AppAssembly())
+    assembler.apply(assembly: DiscoverAssembly())
+    assembler.apply(assembly: SearchAssembly())
+    assembler.apply(assembly: MoreAssembly())
+    assembler.apply(assembly: SettingsAssembly())
   }
 
 }
