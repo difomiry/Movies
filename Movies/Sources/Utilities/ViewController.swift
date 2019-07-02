@@ -20,6 +20,17 @@ class ViewController<ViewModelType>: UIViewController, StoryboardInstantiable {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    setupViews()
+    setupThemes()
+    setupBindings()
+  }
+
+  /// Sets up the views.
+  func setupViews() {}
+
+  /// Sets up the themes.
+  func setupThemes() {
+
     themes.rx
       .bind({ $0.backgroundColor }, to: view.rx.backgroundColor)
       .disposed(by: disposeBag)
@@ -31,5 +42,8 @@ class ViewController<ViewModelType>: UIViewController, StoryboardInstantiable {
       })
       .disposed(by: disposeBag)
   }
+
+  /// Sets up the bindings.
+  func setupBindings() {}
 
 }

@@ -22,23 +22,10 @@ final class SearchViewController: ViewController<SearchViewModel> {
 
   var searchCellViewModelFactory: SearchCellViewModelFactory!
 
-  // MARK: - UIViewController
+  // MARK: - Setup
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    setupViews()
-    setupThemes()
-    setupBindings()
-  }
-
-}
-
-// MARK: - Setup
-
-extension SearchViewController {
-
-  fileprivate func setupViews() {
+  override func setupViews() {
+    super.setupViews()
 
     searchController.dimsBackgroundDuringPresentation = false
     searchController.obscuresBackgroundDuringPresentation = false
@@ -55,7 +42,8 @@ extension SearchViewController {
     tableView.register(SearchCell.self)
   }
 
-  fileprivate func setupThemes() {
+  override func setupThemes() {
+    super.setupThemes()
 
     themes.rx
       .bind({ $0.barStyle }, to: searchBar.rx.barStyle)
@@ -74,7 +62,8 @@ extension SearchViewController {
       .disposed(by: disposeBag)
   }
 
-  fileprivate func setupBindings() {
+  override func setupBindings() {
+    super.setupBindings()
 
     let items = viewModel.search(query: searchBar.rx.text
       .filterNil()

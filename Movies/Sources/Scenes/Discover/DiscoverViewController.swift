@@ -7,33 +7,14 @@ final class DiscoverViewController: ViewController<DiscoverViewModel> {
 
   @IBOutlet private var tableView: UITableView!
 
-  // MARK: - UIViewController
+  // MARK: - Setup
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    setupViews()
-    setupThemes()
-    setupBindings()
-  }
-
-}
-
-// MARK: - Setup
-
-extension DiscoverViewController {
-
-  fileprivate func setupViews() {
-  }
-
-  fileprivate func setupThemes() {
+  override func setupThemes() {
+    super.setupThemes()
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
       .disposed(by: disposeBag)
-  }
-
-  fileprivate func setupBindings() {
   }
 
 }

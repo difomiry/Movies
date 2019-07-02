@@ -10,35 +10,24 @@ final class MoreViewController: ViewController<MoreViewModel> {
 
   private let settingsButton = UIBarButtonItem(image: UIImage(named: "Settings"), style: .done, target: nil, action: nil)
 
-  // MARK: - UIViewController
+  // MARK: - Setup
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    setupViews()
-    setupThemes()
-    setupBindings()
-  }
-
-}
-
-// MARK: - Setup
-
-extension MoreViewController {
-
-  fileprivate func setupViews() {
+  override func setupViews() {
+    super.setupViews()
 
     navigationItem.rightBarButtonItem = settingsButton
   }
 
-  fileprivate func setupThemes() {
+  override func setupThemes() {
+    super.setupThemes()
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
       .disposed(by: disposeBag)
   }
 
-  fileprivate func setupBindings() {
+  override func setupBindings() {
+    super.setupBindings()
 
     settingsButton.rx.tap
       .bind(to: viewModel.tapSettings)

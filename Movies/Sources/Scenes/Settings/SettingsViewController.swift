@@ -9,23 +9,10 @@ final class SettingsViewController: ViewController<SettingsViewModel> {
 
   private var tableFooter: UIView!
 
-  // MARK: - UIViewController
+  // MARK: - Setup
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    setupViews()
-    setupThemes()
-    setupBindings()
-  }
-
-}
-
-// MARK: - Setup
-
-extension SettingsViewController {
-
-  fileprivate func setupViews() {
+  override func setupViews() {
+    super.setupViews()
 
     tableFooter = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 0.5))
 
@@ -35,7 +22,8 @@ extension SettingsViewController {
     tableView.register(VersionCell.self)
   }
 
-  fileprivate func setupThemes() {
+  override func setupThemes() {
+    super.setupThemes()
 
     themes.rx
       .bind({ $0.cellSeparatorColor }, to: tableView.rx.separatorColor)
@@ -46,7 +34,8 @@ extension SettingsViewController {
       .disposed(by: disposeBag)
   }
 
-  fileprivate func setupBindings() {
+  override func setupBindings() {
+    super.setupBindings()
 
     viewModel.cells
       .asDriver(onErrorJustReturn: [])
