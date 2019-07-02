@@ -2,16 +2,7 @@ import UIKit
 import RxSwift
 import Swinject
 
-final class DiscoverCoordinator: Coordinator<Void> {
-
-  let navigationController: UINavigationController
-
-  let resolver: Resolver
-
-  init(in navigationController: UINavigationController, with resolver: Resolver) {
-    self.navigationController = navigationController
-    self.resolver = resolver
-  }
+final class DiscoverCoordinator: BaseCoordinator<Void, UINavigationController> {
 
   override func start() -> Observable<Void> {
 
@@ -19,9 +10,9 @@ final class DiscoverCoordinator: Coordinator<Void> {
 
     viewController.title = "Discover"
 
-    navigationController.navigationBar.prefersLargeTitles = true
+    context.navigationBar.prefersLargeTitles = true
 
-    navigationController.pushViewController(viewController, animated: false)
+    context.pushViewController(viewController, animated: false)
 
     return .never()
   }

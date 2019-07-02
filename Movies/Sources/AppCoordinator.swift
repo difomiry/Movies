@@ -2,16 +2,7 @@ import UIKit
 import RxSwift
 import Swinject
 
-final class AppCoordinator: Coordinator<Void> {
-
-  let window: UIWindow
-
-  let resolver: Resolver
-
-  init(in window: UIWindow, with resolver: Resolver) {
-    self.window = window
-    self.resolver = resolver
-  }
+final class AppCoordinator: BaseCoordinator<Void, UIWindow> {
 
   override func start() -> Observable<Void> {
 
@@ -27,8 +18,8 @@ final class AppCoordinator: Coordinator<Void> {
 
     tabBarController.viewControllers = [navigationController1, navigationController2, navigationController3]
 
-    window.rootViewController = tabBarController
-    window.makeKeyAndVisible()
+    context.rootViewController = tabBarController
+    context.makeKeyAndVisible()
 
     coordinate(to: resolver.resolve(DiscoverCoordinator.self, argument: navigationController1)!)
       .subscribe()

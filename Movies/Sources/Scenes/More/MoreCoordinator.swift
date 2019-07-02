@@ -2,16 +2,7 @@ import UIKit
 import RxSwift
 import Swinject
 
-final class MoreCoordinator: Coordinator<Void> {
-
-  let navigationController: UINavigationController
-
-  let resolver: Resolver
-
-  init(in navigationController: UINavigationController, with resolver: Resolver) {
-    self.navigationController = navigationController
-    self.resolver = resolver
-  }
+final class MoreCoordinator: BaseCoordinator<Void, UINavigationController> {
 
   override func start() -> Observable<Void> {
 
@@ -19,7 +10,7 @@ final class MoreCoordinator: Coordinator<Void> {
 
     viewController.title = "More"
 
-    navigationController.pushViewController(viewController, animated: false)
+    context.pushViewController(viewController, animated: false)
 
     viewController.viewModel.openSettings
       .subscribe(onNext: { [weak self] _ in self?.openSettings() })
@@ -29,7 +20,7 @@ final class MoreCoordinator: Coordinator<Void> {
   }
 
   private func openSettings() {
-    coordinate(to: resolver.resolve(SettingsCoordinator.self, argument: navigationController)!)
+    coordinate(to: resolver.resolve(SettingsCoordinator.self, argument: context)!)
       .subscribe()
       .disposed(by: disposeBag)
   }

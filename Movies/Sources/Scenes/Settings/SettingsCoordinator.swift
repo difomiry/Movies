@@ -2,16 +2,7 @@ import UIKit
 import RxSwift
 import Swinject
 
-final class SettingsCoordinator: Coordinator<Void> {
-
-  let navigationController: UINavigationController
-
-  let resolver: Resolver
-
-  init(in navigationController: UINavigationController, with resolver: Resolver) {
-    self.navigationController = navigationController
-    self.resolver = resolver
-  }
+final class SettingsCoordinator: BaseCoordinator<Void, UINavigationController> {
 
   override func start() -> Observable<Void> {
 
@@ -19,7 +10,7 @@ final class SettingsCoordinator: Coordinator<Void> {
 
     viewController.title = "Settings"
 
-    navigationController.pushViewController(viewController, animated: true)
+    context.pushViewController(viewController, animated: true)
 
     return .never()
   }
