@@ -167,6 +167,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45F5CD3D2336525500D03585 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84722FA92261FB1B00BF7398 /* Configuration.plist */,
+				8483B67322121D1100590283 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8447827722479A04008D84C0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +245,7 @@
 			children = (
 				8483B67A22121D5700590283 /* Resources */,
 				8483B67922121D2700590283 /* Sources */,
-				84722FA92261FB1B00BF7398 /* Configuration.plist */,
-				8483B67322121D1100590283 /* Info.plist */,
+				45F5CD3D2336525500D03585 /* Supporting Files */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
