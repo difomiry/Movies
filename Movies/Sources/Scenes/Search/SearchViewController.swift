@@ -67,7 +67,7 @@ final class SearchViewController: ViewController<SearchViewModel> {
 
     let items = viewModel.search(query: searchBar.rx.text
       .filterNil()
-      .throttle(1.5, scheduler: MainScheduler.instance)
+      .debounce(.seconds(2), scheduler: MainScheduler.instance)
       .distinctUntilChanged())
 
     items
